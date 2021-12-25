@@ -1,0 +1,378 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="806.0" prefWidth="1284.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="british.council.AdministratorDashboardController">
+   <children>
+      <AnchorPane id="AnchorPane" layoutY="3.0" prefHeight="797.0" prefWidth="1302.0">
+         <children>
+            <ImageView fitHeight="806.0" fitWidth="1316.0" layoutX="-11.0" layoutY="-7.0" pickOnBounds="true" preserveRatio="true">
+               <effect>
+                  <DropShadow />
+               </effect>
+               <image>
+                  <Image url="@../../icons/BC%20Background%20dark.jpeg" />
+               </image>
+            </ImageView>
+            <AnchorPane layoutY="-1.0" prefHeight="789.0" prefWidth="231.0" style="-fx-background-color: #2054; -fx-border-color: #FFFFFF;">
+               <children>
+                  <ImageView fitHeight="64.0" fitWidth="221.0" layoutX="4.0" layoutY="24.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../icons/BritishCouncil_Logo_Indigo_RGB%20(1).png" />
+                     </image>
+                  </ImageView>
+                  <VBox layoutX="1.0" layoutY="122.0" prefHeight="673.0" prefWidth="228.0">
+                     <children>
+                        <Button fx:id="homeButton" mnemonicParsing="false" onAction="#homeButtonHAndle" prefHeight="90.0" prefWidth="228.0" style="-fx-background-color: #173F5F; -fx-border-color: #FFFFFF;" text="HOME" textAlignment="CENTER" textFill="WHITE">
+                           <font>
+                              <Font name="Roboto Bold" size="18.0" />
+                           </font>
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                        </Button>
+                        <Button fx:id="profileButton" mnemonicParsing="false" onAction="#profileButtonHandle" prefHeight="90.0" prefWidth="228.0" style="-fx-background-color: #173F5F; -fx-border-color: #FFFFFF;" text="PROFILE" textAlignment="CENTER" textFill="WHITE">
+                           <font>
+                              <Font name="Roboto Bold" size="18.0" />
+                           </font>
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                        </Button>
+                        <Button fx:id="enrollEmployeeButton" layoutX="10.0" layoutY="60.0" mnemonicParsing="false" onAction="#enrollEmployeeButtonHandle" prefHeight="90.0" prefWidth="228.0" style="-fx-background-color: #173F5F; -fx-border-color: #FFFFFF;" text="ENROLL EMPLOYEE" textAlignment="CENTER" textFill="WHITE">
+                           <font>
+                              <Font name="Roboto Bold" size="18.0" />
+                           </font>
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                        </Button>
+                        <Button fx:id="updatePolicyButton" layoutX="10.0" layoutY="110.0" mnemonicParsing="false" onAction="#updatePolicyButtonHandle" prefHeight="90.0" prefWidth="228.0" style="-fx-background-color: #173F5F; -fx-border-color: #FFFFFF;" text="UPDATE POLICY" textAlignment="CENTER" textFill="WHITE">
+                           <font>
+                              <Font name="Roboto Bold" size="18.0" />
+                           </font>
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                        </Button>
+                        <Button fx:id="updateSalaryButton" layoutX="10.0" layoutY="280.0" mnemonicParsing="false" onAction="#updateSalaryButtonHandle" prefHeight="103.0" prefWidth="228.0" style="-fx-background-color: #173F5F; -fx-border-color: #FFFFFF;" text="UPDATE SALARY" textAlignment="CENTER" textFill="WHITE">
+                           <font>
+                              <Font name="Roboto Bold" size="18.0" />
+                           </font>
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                        </Button>
+                        <Button fx:id="reportButton" layoutX="10.0" layoutY="370.0" mnemonicParsing="false" onAction="#reportButtonHandle" prefHeight="101.0" prefWidth="228.0" style="-fx-background-color: #173F5F; -fx-border-color: #FFFFFF;" text="REPORT" textAlignment="CENTER" textFill="WHITE">
+                           <font>
+                              <Font name="Roboto Bold" size="18.0" />
+                           </font>
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                        </Button>
+                        <Button fx:id="logoutButton" layoutX="10.0" layoutY="160.0" mnemonicParsing="false" onAction="#logoutButtonHandle" prefHeight="115.0" prefWidth="228.0" style="-fx-background-color: #173F5F; -fx-border-color: #FFFFFF;" text="LOG OUT" textAlignment="CENTER" textFill="WHITE">
+                           <font>
+                              <Font name="Roboto Bold" size="18.0" />
+                           </font>
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                        </Button>
+                     </children>
+                  </VBox>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="welcomeAnchorPane" layoutX="228.0" layoutY="-2.0" prefHeight="800.0" prefWidth="1063.0" visible="false">
+               <children>
+                  <ImageView fitHeight="168.0" fitWidth="528.0" layoutX="273.0" layoutY="59.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../icons/BC%20Log%20transparent.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="299.0" fitWidth="935.0" layoutX="174.0" layoutY="306.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../icons/WELCOME.jpg" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="profileButtonAnchorPane" layoutX="228.0" layoutY="-1.0" prefHeight="800.0" prefWidth="1074.0" visible="false">
+               <children>
+                  <ImageView fitHeight="168.0" fitWidth="528.0" layoutX="273.0" layoutY="59.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../icons/BC%20Log%20transparent.png" />
+                     </image>
+                  </ImageView>
+                  <Button fx:id="viewProfileButton" layoutX="208.0" layoutY="309.0" mnemonicParsing="false" onAction="#viewProfileButtonHandle" prefHeight="84.0" prefWidth="658.0" style="-fx-background-color: #4EA9D0;" text="View Profile" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="accountSettingButton" layoutX="208.0" layoutY="421.0" mnemonicParsing="false" onAction="#accountSettingButtonHandle" prefHeight="84.0" prefWidth="658.0" style="-fx-background-color: #4EA9D0;" text="Account Setting" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="backButton" layoutX="391.0" layoutY="613.0" mnemonicParsing="false" onAction="#backButtonHandle" prefHeight="56.0" prefWidth="293.0" style="-fx-background-color: #4EA9D0;" text="Back" textFill="WHITE">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Button>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="enrollEmployeeAnchorPane" layoutX="228.0" prefHeight="789.0" prefWidth="1063.0" visible="false">
+               <children>
+                  <ImageView fitHeight="168.0" fitWidth="528.0" layoutX="268.0" layoutY="237.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../icons/BC%20Log%20transparent.png" />
+                     </image>
+                  </ImageView>
+                  <Button fx:id="backButton1" layoutX="386.0" layoutY="554.0" mnemonicParsing="false" onAction="#backButtonHandle" prefHeight="56.0" prefWidth="293.0" style="-fx-background-color: #4EA9D0;" text="Back" textFill="WHITE">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Button>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="updatePolicyButtonAnchorPane" layoutX="228.0" layoutY="3.0" prefHeight="789.0" prefWidth="1074.0" visible="false">
+               <children>
+                  <ImageView fitHeight="64.0" fitWidth="255.0" layoutX="429.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../icons/BC%20Log%20transparent.png" />
+                     </image>
+                  </ImageView>
+                  <HBox layoutX="316.0" layoutY="672.0" prefHeight="42.0" prefWidth="441.0">
+                     <children>
+                        <Button mnemonicParsing="false" onAction="#backButtonHandle" prefHeight="42.0" prefWidth="446.0" style="-fx-background-color: #4EA9D0; -fx-border-color: #FFFFFF;" text="Back" textFill="WHITE">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </HBox>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="profileInfoAnchorPane" layoutX="228.0" layoutY="-1.0" prefHeight="800.0" prefWidth="1074.0" visible="false">
+               <children>
+                  <ImageView fitHeight="593.0" fitWidth="962.0" layoutX="56.0" layoutY="85.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../icons/1280x720-white-solid-color-background.jpg" />
+                     </image>
+                     <effect>
+                        <DropShadow radius="50.77" width="184.08" />
+                     </effect>
+                  </ImageView>
+                  <Button layoutX="391.0" layoutY="702.0" mnemonicParsing="false" onAction="#backButtonHandle" prefHeight="56.0" prefWidth="293.0" style="-fx-background-color: #4EA9D0;" text="Back" textFill="WHITE">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Button>
+                  <Text fill="#fff9f9" layoutX="252.0" layoutY="62.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Profile Information" textAlignment="CENTER" underline="true" wrappingWidth="571.9830722808838">
+                     <font>
+                        <Font name="Roboto Bold" size="36.0" />
+                     </font>
+                  </Text>
+                  <Label layoutX="141.0" layoutY="203.0" prefHeight="36.0" prefWidth="154.0" text="Full Name:">
+                     <font>
+                        <Font name="Roboto Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="141.0" layoutY="256.0" prefHeight="36.0" prefWidth="154.0" text="Gender:">
+                     <font>
+                        <Font name="Roboto Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="141.0" layoutY="304.0" prefHeight="36.0" prefWidth="154.0" text="Date of Birth:">
+                     <font>
+                        <Font name="Roboto Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="141.0" layoutY="412.0" prefHeight="36.0" prefWidth="154.0" text="NID Number:">
+                     <font>
+                        <Font name="Roboto Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="141.0" layoutY="356.0" prefHeight="36.0" prefWidth="154.0" text="Phone Number:">
+                     <font>
+                        <Font name="Roboto Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="fullNameField" layoutX="340.0" layoutY="203.0" prefHeight="36.0" prefWidth="395.0">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="genderField" layoutX="340.0" layoutY="256.0" prefHeight="36.0" prefWidth="395.0">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </TextField>
+                  <DatePicker fx:id="birthdayDatePickerField" layoutX="340.0" layoutY="304.0" prefHeight="36.0" prefWidth="395.0" />
+                  <TextField fx:id="phoneNumberField" layoutX="340.0" layoutY="356.0" prefHeight="36.0" prefWidth="395.0">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="nidNumberField" layoutX="340.0" layoutY="412.0" prefHeight="36.0" prefWidth="395.0">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </TextField>
+                  <Button fx:id="saveButton" layoutX="391.0" layoutY="529.0" mnemonicParsing="false" onAction="#saveButtonHandle" prefHeight="56.0" prefWidth="293.0" style="-fx-background-color: #4EA9D0;" text="Save" textFill="WHITE" visible="false">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="editProfileButton" layoutX="398.0" layoutY="114.0" mnemonicParsing="false" onAction="#editProfileButtonHandle" prefHeight="42.0" prefWidth="279.0" style="-fx-background-color: #4EA9D0;" text="Edit Profile" textFill="WHITE">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Button>
+                  <Label fx:id="errorLabelSaveButton" alignment="CENTER" contentDisplay="CENTER" layoutX="340.0" layoutY="478.0" prefHeight="26.0" prefWidth="395.0" textAlignment="CENTER" textFill="RED">
+                     <font>
+                        <Font name="Roboto Bold" size="20.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="AccountSettingAnchorPane" layoutX="228.0" layoutY="3.0" prefHeight="800.0" prefWidth="1074.0" visible="false">
+               <children>
+                  <ImageView fitHeight="593.0" fitWidth="962.0" layoutX="56.0" layoutY="85.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../icons/1280x720-white-solid-color-background.jpg" />
+                     </image>
+                     <effect>
+                        <DropShadow radius="50.77" width="184.08" />
+                     </effect>
+                  </ImageView>
+                  <Button layoutX="391.0" layoutY="702.0" mnemonicParsing="false" onAction="#backButtonHandle" prefHeight="56.0" prefWidth="293.0" style="-fx-background-color: #4EA9D0;" text="Back" textFill="WHITE">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Button>
+                  <Text fill="#fff9f9" layoutX="252.0" layoutY="62.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Account Settings" textAlignment="CENTER" underline="true" wrappingWidth="571.9830722808838">
+                     <font>
+                        <Font name="Roboto Bold" size="36.0" />
+                     </font>
+                  </Text>
+                  <Label layoutX="141.0" layoutY="214.0" prefHeight="36.0" prefWidth="154.0" text="Username:">
+                     <font>
+                        <Font name="Roboto Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="141.0" layoutY="292.0" prefHeight="36.0" prefWidth="154.0" text="Email:">
+                     <font>
+                        <Font name="Roboto Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="141.0" layoutY="366.0" prefHeight="36.0" prefWidth="154.0" text="Password:">
+                     <font>
+                        <Font name="Roboto Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="usernameField" layoutX="340.0" layoutY="214.0" prefHeight="36.0" prefWidth="395.0">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="emailField" layoutX="340.0" layoutY="292.0" prefHeight="36.0" prefWidth="395.0">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </TextField>
+                  <Button fx:id="saveAccountButton" layoutX="391.0" layoutY="502.0" mnemonicParsing="false" onAction="#saveAccountButtonHandle" prefHeight="56.0" prefWidth="293.0" style="-fx-background-color: #4EA9D0;" text="Save" textFill="WHITE" visible="false">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="editAccountButton" layoutX="398.0" layoutY="126.0" mnemonicParsing="false" onAction="#editAccountButtonHandle" prefHeight="42.0" prefWidth="279.0" style="-fx-background-color: #4EA9D0;" text="Edit" textFill="WHITE">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Button>
+                  <Label fx:id="errorLabelSaveAccountButton" alignment="CENTER" contentDisplay="CENTER" layoutX="340.0" layoutY="450.0" prefHeight="26.0" prefWidth="395.0" textAlignment="CENTER" textFill="RED">
+                     <font>
+                        <Font name="Roboto Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="passwordField" layoutX="340.0" layoutY="366.0" prefHeight="36.0" prefWidth="395.0">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </TextField>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="reportAnchorPane" layoutX="228.0" prefHeight="797.0" prefWidth="1063.0" visible="false">
+               <children>
+                  <ImageView fitHeight="48.0" fitWidth="189.0" layoutX="139.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../icons/BC%20Log%20transparent.png" />
+                     </image>
+                  </ImageView>
+                  <Button layoutX="73.0" layoutY="725.0" mnemonicParsing="false" onAction="#backButtonHandle" prefHeight="36.0" prefWidth="293.0" style="-fx-background-color: #4EA9D0;" text="Back" textFill="WHITE">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="generateReportButton" layoutX="646.0" layoutY="725.0" mnemonicParsing="false" onAction="#generateReportButtonHandle" prefHeight="30.0" prefWidth="293.0" style="-fx-background-color: #4EA9D0;" text="Generate Report" textFill="WHITE">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Button>
+                  <ComboBox fx:id="userTypeComboBox" layoutX="457.0" layoutY="26.0" onAction="#userTypeComboBoxOnClick" prefHeight="25.0" prefWidth="215.0" />
+                  <ImageView fitHeight="616.0" fitWidth="1036.0" layoutX="14.0" layoutY="87.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../icons/1280x720-white-solid-color-background.jpg" />
+                     </image>
+                  </ImageView>
+                  <PieChart fx:id="pieChart" layoutX="32.0" layoutY="107.0" prefHeight="449.0" prefWidth="490.0" />
+                  <BarChart fx:id="barChart" layoutX="542.0" layoutY="107.0" prefHeight="449.0" prefWidth="500.0">
+                    <xAxis>
+                      <CategoryAxis label="Name" prefHeight="18.0" prefWidth="445.0" side="BOTTOM" fx:id="xAxis" />
+                    </xAxis>
+                    <yAxis>
+                      <NumberAxis fx:id="yAxis" label="Taka" prefHeight="401.0" prefWidth="21.0" side="LEFT" />
+                    </yAxis>
+                  </BarChart>
+                  <Label fx:id="chartLabel" alignment="CENTER" layoutX="403.0" layoutY="610.0" prefHeight="25.0" prefWidth="279.0" />
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="updateSalaryButtonAnchorPane" layoutX="228.0" layoutY="-5.0" prefHeight="803.0" prefWidth="1063.0" visible="false">
+               <children>
+                  <ImageView fitHeight="64.0" fitWidth="255.0" layoutX="429.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../icons/BC%20Log%20transparent.png" />
+                     </image>
+                  </ImageView>
+                  <HBox layoutX="316.0" layoutY="672.0" prefHeight="42.0" prefWidth="441.0">
+                     <children>
+                        <Button mnemonicParsing="false" onAction="#backButtonHandle" prefHeight="42.0" prefWidth="446.0" style="-fx-background-color: #4EA9D0; -fx-border-color: #FFFFFF;" text="Back" textFill="WHITE">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </HBox>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

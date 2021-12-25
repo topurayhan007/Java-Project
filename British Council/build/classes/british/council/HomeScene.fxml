@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="659.0" prefWidth="1191.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="british.council.HomeSceneController">
+   <children>
+      <VBox prefHeight="655.0" prefWidth="162.0">
+         <children>
+            <Button fx:id="homeButton" mnemonicParsing="false" onAction="#homeButtonHandle" prefHeight="123.0" prefWidth="162.0" text="HOME" />
+            <Button fx:id="profileButton" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#profileButtonHandle" prefHeight="149.0" prefWidth="162.0" text="PROFILE" />
+            <Button fx:id="registerButton" layoutX="10.0" layoutY="87.0" mnemonicParsing="false" onAction="#registerButtonHandle" prefHeight="128.0" prefWidth="162.0" text="REGISTER" />
+            <Button fx:id="resultButton" layoutX="10.0" layoutY="164.0" mnemonicParsing="false" onAction="#resultButtonHandle" prefHeight="120.0" prefWidth="162.0" text="RESULT" />
+            <Button fx:id="logoutButton" layoutX="10.0" layoutY="241.0" mnemonicParsing="false" onAction="#logoutButtonHandle" prefHeight="134.0" prefWidth="162.0" text="LOG OUT" />
+         </children>
+         <effect>
+            <DropShadow />
+         </effect>
+      </VBox>
+      <AnchorPane layoutX="163.0" prefHeight="659.0" prefWidth="1028.0">
+         <children>
+            <ImageView fitHeight="168.0" fitWidth="353.0" layoutX="338.0" layoutY="68.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../icons/BritishCouncil_Logo_Indigo_RGB%20(1).png" />
+               </image>
+            </ImageView>
+            <Label alignment="CENTER" layoutX="180.0" layoutY="210.0" prefHeight="255.0" prefWidth="668.0" text="WELCOME" textAlignment="CENTER" textFill="#440480">
+               <font>
+                  <Font name="System Bold" size="76.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

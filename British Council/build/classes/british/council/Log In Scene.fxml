@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="british.council.LogInSceneController">
+   <children>
+      <ImageView fitHeight="800.0" fitWidth="1315.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../icons/BC%20Background%20dark.jpeg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="108.0" fitWidth="330.0" layoutX="118.0" layoutY="306.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../icons/BritishCouncil_Logo_Indigo_RGB%20(1).png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="684.0" fitWidth="498.0" layoutY="32.0" pickOnBounds="true" preserveRatio="true" x="572.0" y="47.0">
+         <image>
+            <Image url="@../../icons/white-solid-color-background.jpg" />
+         </image>
+         <effect>
+            <DropShadow blurType="GAUSSIAN" height="90.0" radius="44.5" width="90.0" />
+         </effect>
+      </ImageView>
+      <Text layoutX="663.0" layoutY="152.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sign In" textAlignment="CENTER" wrappingWidth="316.73046875">
+         <font>
+            <Font name="Calibri Bold" size="44.0" />
+         </font>
+         <fill>
+            <LinearGradient endY="1.0">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color blue="0.501960813999176" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color blue="0.4000000059604645" red="1.0" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </fill>
+      </Text>
+      <Button fx:id="logInButton" layoutX="655.0" layoutY="502.0" mnemonicParsing="false" onMouseClicked="#logInButtonAction" opacity="0.88" prefHeight="61.0" prefWidth="330.0" style="-fx-background-color: #000080; -fx-background-radius: 3em;" text="LOG IN" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="Calibri Bold" size="18.0" />
+         </font>
+      </Button>
+      <TextField fx:id="usernameField" layoutX="648.0" layoutY="190.0" prefHeight="61.0" prefWidth="344.0" promptText="Username" style="-fx-border-color: #99ccff;">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </TextField>
+      <PasswordField fx:id="passwordField" layoutX="649.0" layoutY="276.0" prefHeight="61.0" prefWidth="344.0" promptText="Password" style="-fx-border-color: #99ccff;">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </PasswordField>
+      <Text fx:id="forgotPassword" layoutX="649.0" layoutY="359.0" onDragDetected="#forgotPasswordButtonAction" strokeType="OUTSIDE" strokeWidth="0.0" text="Forgot Password?" textAlignment="CENTER" wrappingWidth="344.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <Text fx:id="incorrectLogInCredentials" fill="#fc0505" layoutX="601.0" layoutY="457.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="439.0">
+         <font>
+            <Font name="Calibri" size="14.0" />
+         </font>
+      </Text>
+      <Text fx:id="signUp" fill="NAVY" layoutX="820.0" layoutY="612.0" onMouseClicked="#signUpButtonAction" strokeType="OUTSIDE" strokeWidth="0.0" text="Sign Up">
+         <font>
+            <Font name="Calibri Bold" size="23.0" />
+         </font>
+      </Text>
+      <Label layoutX="742.0" layoutY="593.0" prefHeight="28.0" prefWidth="70.0" text="New User?">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <ChoiceBox fx:id="userTypeChoiceBox" layoutX="649.0" layoutY="385.0" prefHeight="44.0" prefWidth="344.0" />
+   </children>
+</AnchorPane>

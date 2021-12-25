@@ -1,0 +1,8 @@
+Accounting,95.6,A*
+English,85,A
+Bangla,65,B
+Physics,99,A*
+Chemistry,87.5,A
+Biology,65,B
+Maths-B,100,A*
+Pure Maths,94.4,A*

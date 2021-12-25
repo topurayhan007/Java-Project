@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="820.0" prefWidth="1330.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="british.council.LibraryMemberEnrollmentSceneController">
+   <children>
+      <ImageView fitHeight="832.0" fitWidth="1330.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../icons/BC%20Background%20dark.jpeg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="108.0" fitWidth="330.0" layoutX="113.0" layoutY="332.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../icons/BritishCouncil_Logo_Indigo_RGB%20(1).png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="820.0" fitWidth="617.0" layoutX="-16.0" layoutY="-37.0" pickOnBounds="true" preserveRatio="true" x="572.0" y="47.0">
+         <image>
+            <Image url="@../../icons/white-solid-color-background.jpg" />
+         </image>
+         <effect>
+            <DropShadow blurType="GAUSSIAN" height="90.0" radius="44.5" width="90.0" />
+         </effect>
+      </ImageView>
+      <Text fill="NAVY" layoutX="594.0" layoutY="91.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Library Member Registration Form" wrappingWidth="540.13671875">
+         <font>
+            <Font name="Calibri Bold" size="36.0" />
+         </font>
+      </Text>
+      <Label layoutX="629.0" layoutY="129.0" prefHeight="36.0" prefWidth="364.0" text="Full Name">
+         <font>
+            <Font name="Roboto Bold" size="20.0" />
+         </font>
+      </Label>
+      <TextField fx:id="fullNameField" layoutX="628.0" layoutY="171.0" prefHeight="48.0" prefWidth="449.0">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </TextField>
+      <Label layoutX="629.0" layoutY="285.0" prefHeight="36.0" prefWidth="364.0" text="Email">
+         <font>
+            <Font name="Roboto Bold" size="20.0" />
+         </font>
+      </Label>
+      <TextField fx:id="emailField" layoutX="627.0" layoutY="332.0" prefHeight="48.0" prefWidth="449.0">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </TextField>
+      <Label layoutX="625.0" layoutY="379.0" prefHeight="36.0" prefWidth="214.0" text="Phone Number">
+         <font>
+            <Font name="Roboto Bold" size="20.0" />
+         </font>
+      </Label>
+      <TextField fx:id="phoneNumberField" layoutX="625.0" layoutY="420.0" prefHeight="48.0" prefWidth="214.0">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </TextField>
+      <Label layoutX="852.0" layoutY="379.0" prefHeight="36.0" prefWidth="222.0" text="Date of Birth">
+         <font>
+            <Font name="Roboto Bold" size="20.0" />
+         </font>
+      </Label>
+      <DatePicker fx:id="birthdayDatePickerField" layoutX="852.0" layoutY="420.0" prefHeight="48.0" prefWidth="222.0" />
+      <Button fx:id="registerButton" layoutX="696.0" layoutY="676.0" mnemonicParsing="false" onAction="#registerButtonHandle" prefHeight="65.0" prefWidth="295.0" style="-fx-background-color: #000080; -fx-background-radius: 3em;" text="Register" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="25.0" />
+         </font>
+      </Button>
+      <CheckBox fx:id="termsCheckBox" layoutX="703.0" layoutY="592.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="281.0" text="I Agree to Tems and Condition">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </CheckBox>
+      <Label layoutX="630.0" layoutY="483.0" prefHeight="36.0" prefWidth="295.0" text="NID Number">
+         <font>
+            <Font name="Roboto Bold" size="20.0" />
+         </font>
+      </Label>
+      <TextField fx:id="nidNumberField" layoutX="627.0" layoutY="519.0" prefHeight="48.0" prefWidth="449.0">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </TextField>
+      <RadioButton fx:id="genderMale" layoutX="660.0" layoutY="247.0" mnemonicParsing="false" text="Male" textAlignment="CENTER">
+         <font>
+            <Font name="Roboto Bold" size="18.0" />
+         </font></RadioButton>
+      <RadioButton fx:id="genderFemale" layoutX="778.0" layoutY="247.0" mnemonicParsing="false" text="Female">
+         <font>
+            <Font name="Roboto Bold" size="18.0" />
+         </font></RadioButton>
+      <RadioButton fx:id="genderOther" layoutX="911.0" layoutY="244.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="105.0" text="Other" textAlignment="CENTER">
+         <font>
+            <Font name="Roboto Bold" size="18.0" />
+         </font></RadioButton>
+      <Label fx:id="errorLabelTextField" layoutX="621.0" layoutY="633.0" prefHeight="24.0" prefWidth="461.0" textAlignment="CENTER" textFill="RED">
+         <font>
+            <Font name="Roboto" size="14.0" />
+         </font>
+      </Label>
+      <Button fx:id="backButton" layoutX="171.0" layoutY="501.0" mnemonicParsing="false" onAction="#backButtonHandle" prefHeight="27.0" prefWidth="196.0" style="-fx-background-color: #000080; -fx-background-radius: 3em;" text="Back" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="25.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
